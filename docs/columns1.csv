@@ -1,0 +1,56 @@
+,0,Nominal to Numerical,Done,Usefullness,erroneous ,
+0,part_id,,,,,
+1,fried,Non F / Pre F / Frail -> 0/1/2  ,,,F,
+2,gender,F / M -> 0 / 1,,,F,
+3,age,,,,F,
+4,hospitalization_one_year,,,,F,
+5,hospitalization_three_years,,,,T,
+6,ortho_hypotension,Yes / No -> 1 / 0,,orthostatic hypotension is a situation where the blood pressure of a person decreases once he tries to stund up ,F,
+7,vision,poor / moderately /well -> 0 / 1 / 2,,,F,
+8,audition,poor / moderately /well -> 0 / 1 / 2,,,F,
+9,weight_loss,Yes / No -> 1 / 0,,,T,
+10,exhaustion_score,,,,F,
+11,raise_chair_time,,,,T,
+12,balance_single,>5 / <5 / non realizable  -> 0/1/2,,balance achieved  standing in a single foot ,T,
+13,gait_get_up,,,,T,
+14,gait_speed_4m,,,,T,
+15,gait_optional_binary,,,I don’t understand what that is ,,
+16,gait_speed_slower,yes /no / non realizable  -> 0/1/2,,,,
+17,grip_strength_abnormal,Yes / No -> 1 / 0,,,,
+18,low_physical_activity,Yes / No -> 1 / 0,,,,
+19,falls_one_year,,,,T,
+20,fractures_three_years,,,,T,
+21,bmi_score,,,,T,
+22,bmi_body_fat,,,,T,
+23,waist,,,,F,
+24,lean_body_mass,,,,T,
+25,screening_score,,,,F,
+26,cognitive_total_score,,,,F,
+27,memory_complain,Yes / No -> 1 / 0,,,T,
+28,sleep,No sleep / Occational Sleep / Permanent Sleep [Problem] -> 2 / 1 /0,,,T,
+29,mmse_total_score,,,,F,
+30,depression_total_score,,,,F,
+31,anxiety_perception,,,,T,nan
+32,living_alone,Yes / No -> 1 / 0,,,T,nan
+33,leisure_out,,,,F,
+34,leisure_club,,,,T,nan
+35,social_visits,,,,T,Big Value
+36,social_calls,,,,T,Big Value
+37,social_phone,,,,F,
+38,social_skype,,,,T,Big Value
+39,social_text,,,,T,Big Value
+40,house_suitable_participant,Yes / No -> 1 / 0,,,F,
+41,house_suitable_professional,Yes / No -> 1 / 0,,,F,
+42,stairs_number,,,,F,
+43,life_quality,,,,F,
+44,health_rate,VB / B / M / G / E -> 1 / 2 / 3 / 4 / 5,,,T,nan
+45,health_rate_comparison,a lot W / little W  / Same   / little B / lot B -> 1 / 2 / 3 / 4 / 5,,,,
+46,pain_perception,,,,T,nan
+47,activity_regular,No / < 2 / > 2 < 5 / > 5 -> 1/2/3/4/5,,,T,nan
+48,smoking,Never / Past smoker / Current -> 0  / 1 /2,,,T,nan
+49,alcohol_units,,,,T,Big Value
+50,katz_index,,,,F,
+51,iadl_grade,,,,T,nan
+52,comorbidities_count,,,,F,
+53,comorbidities_significant_count,,,,F,
+54,medication_count,,,,F,

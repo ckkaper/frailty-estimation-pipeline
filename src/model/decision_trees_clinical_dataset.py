@@ -2,8 +2,6 @@ import pandas as pd
 from sklearn import tree
 from sklearn.metrics import confusion_matrix
 
-
-
 # train model
 train_data = pd.read_csv('./data/preprocessed/train_data.csv', sep=';')
 
@@ -20,11 +18,13 @@ X_test = test_data.drop(['fried','part_id'], axis=1)
 Y_pred = tree_classifier.predict(X_test)
 
 # Evaluate results
-results = pd.DataFrame({'id': test_data['part_id'],
+results = {'id': test_data['part_id'],
                         'Actual': test_data['fried'],
-                        'predicted':Y_pred})
+                        'predicted': Y_pred}
 
-result = confusion_matrix(results['Actual'],results['predicted'], normalize='all')
-print(result)
+results = pd.DataFrame({'accurancy': [confusion_matrix(results['Actual'],results['predicted'], normalize='all')]})
+
+# Save results
+results.to_csv('./data/results/decision_trees_classification.csv', sep=';')
 
 

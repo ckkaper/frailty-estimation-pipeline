@@ -1,17 +1,33 @@
 {
-  "preprocessing": [{
-    "method": "one",
-    "dataset_created": "preprocessed_one.csv",
-    "approach": {
-      "outliers": "Replace them with empty values",
-      "empty values": "Replace them with the median of each feature for numerical data and with the most frequent one for categorical data",
-      "encode": "Encoding categorical data by ordering them in a way where the greatest value leads to frailty"
-    }
-  }],
-  "classification:": [
-    {
-      "method": "decision trees",
-      "result": ""
-    }
-  ]
+  "clinical_data": {
+    "preprocessing": [{
+      "method": "one",
+      "dataset_created": "preprocessed_one.csv",
+      "approach": {
+        "outliers": "Replace them with empty values",
+        "empty values": "Replace them with the median of each feature for numerical data and with the most frequent one for categorical data",
+        "encode": "Encoding categorical data by ordering them in a way where the greatest value leads to frailty"
+      }
+    }],
+    "classification:": [
+      {
+        "method": "decision trees",
+        "result": ""
+      }
+    ] 
+  }, 
+  "beacons_data": {
+    "preprocessing": [
+      {
+        "method": "one",
+        "dataset_created": "", 
+        "approach": {
+          "room_labels" : "Replace values describing the same room with the room name",
+          "remove_users": "Remove users with invalid id", 
+          "features" : ""
+        }
+      }
+    ]
+  }
+
 }

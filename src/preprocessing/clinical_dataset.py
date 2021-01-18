@@ -67,7 +67,7 @@ for column in data:
         encoder.classes_ = ordered_categories[column]
         data[column] = encoder.transform(data[column]) 
         
-data.to_csv('./data/preprocessed/preprocessed.csv', sep=';')
+data.to_csv('./data/preprocessed/clinical_data.csv', sep=';')
 
 # split dataset to train and test
 data_shape = data.shape[0]

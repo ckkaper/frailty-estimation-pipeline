@@ -54,3 +54,9 @@ clustering:
 
 
 classification:
+	echo "Start Classification Pipeline"
+	python src/clean.py
+	echo "Preprocessing clinical dataset"
+	python src/preprocessing/clinical_dataset.py
+	echo "Model using decision trees"
+	python src/model/decision_trees_clinical_dataset.py

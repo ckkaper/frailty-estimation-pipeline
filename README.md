@@ -3,21 +3,13 @@ This is a small automated pipeline for the evaluation of a sample [Frailsafe](ht
 -   **beacons dataset**
 -   **clinical dataset**
 
-Clean repository
+1. Classification 
+For the classification purposes decision trees where used.
 ```
-make clean
+make classification
 ```
-Preprocess
+2. Clustering
+For the clustering k-means algorithm is used.
 ```
-make preprocess
-```
-
-Model
-```
-make model
-```
-
-Visualize 
-```
-make visualize
+make clustering
 ```

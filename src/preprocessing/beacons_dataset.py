@@ -1,12 +1,13 @@
 import pandas as pd
 
+
 # Read data
 beacons_data = pd.read_csv('./data/raw/beacons_dataset.csv', sep=';').drop(columns=['ts_date','ts_time'])
 
 # Remove invalid part_id entries
 for index, row in beacons_data.iterrows(): 
     if (not len(row['part_id']) == 4 or not row['part_id'].isdigit()):
-        beacons_data.drop(index, inplace=True)  
+       beacons_data.drop(index, inplace=True)  
 
 # Aggregate similar labels to one
 replacement_dict = { 
@@ -49,5 +50,4 @@ for value in beacons_data.part_id.unique():
     person_dict['Kitchen'].append(divide(kitchen[value],records[value]))
 
 new_beacons_data = pd.DataFrame(person_dict)
-print(len(new_beacons_data))
-new_beacons_data.to_csv('./data/preprocessed/beacons_data.csv', sep=';')
+new_beacons_data.to_csv('./data/preprocessed/beacons_data.csv', sep=';', index=False)

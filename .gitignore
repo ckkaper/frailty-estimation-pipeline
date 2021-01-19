@@ -1,4 +1,5 @@
 data/preprocessed
 data/raw
+data/results
 notebooks/.ipynb_checkpoints
 .vscode

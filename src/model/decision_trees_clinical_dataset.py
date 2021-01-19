@@ -25,6 +25,6 @@ results = {'id': test_data['part_id'],
 results = pd.DataFrame({'accurancy': [confusion_matrix(results['Actual'],results['predicted'], normalize='all')]})
 
 # Save results
-results.to_csv('./data/results/decision_trees_classification.csv', sep=';')
+results.to_csv('./data/results/decision_trees_classification.csv', sep=';', index=False)
 
 

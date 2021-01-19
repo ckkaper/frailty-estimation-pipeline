@@ -6,13 +6,10 @@ from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt 
 
 data = pd.read_csv('./data/preprocessed/merged_dataset.csv', sep=';')
-
 # Cluster data using K-means algorithm. 
-results = { 'number_of_clusters': [], 
+results = { 'number_of_clusters': np.arange(2,8), 
       'silhouette_score': [], 
       'PCA_silhouette_score': []}
-
-results['number_of_clusters'] = np.arange(2,8)
 for i in range(2,8): 
     kmeans = KMeans(n_clusters=i, random_state=0).fit(data)
     labels = kmeans.labels_
@@ -27,9 +24,4 @@ for i in range(2,8):
     score = silhouette_score(X, labels)
     results['PCA_silhouette_score'].append(score)
 
-# print(len(results['number_of_clusters']))
-# print(len(results['silhouette_score']))
-# print(len(results['PCA_silhouette_score']))
-results = pd.DataFrame(results)
-results.to_csv('./data/results/k_means_clustering.csv', sep=';')
-
+pd.DataFrame(results).to_csv('./data/results/k_means_clustering.csv',sep=';',index=False)

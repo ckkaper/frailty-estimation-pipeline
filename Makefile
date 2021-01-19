@@ -1,7 +1,7 @@
 clean:
-	python src/clean.py
+	# python src/clean.py
 
-preprocess:	
+preprocessing:	
 ifeq ($(dataset), clinical)
 	echo "INFO: Preprocessing of clinical dataset"
 	python src/preprocessing/clinical_dataset.py
@@ -37,3 +37,20 @@ visualize:
 ifeq ($(tast), 'kala')
 	echo "one"
 endif
+
+clustering:
+	echo "Start of Clustering Pipeline"
+	python src/clean.py
+	echo "Preprocessing clinical dataset"
+	python src/preprocessing/clinical_dataset.py
+	echo "Preprocessing beacons dataset"
+	python src/preprocessing/beacons_dataset.py
+	echo "merge"
+	python src/preprocessing/merge_datasets.py
+	echo "model"
+	python src/model/k_means_full_dataset.py
+	echo "visualize"
+	python src/visualization/clustering.py
+
+
+classification:

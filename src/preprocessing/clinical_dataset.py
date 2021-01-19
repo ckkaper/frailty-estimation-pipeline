@@ -67,7 +67,7 @@ for column in data:
         encoder.classes_ = ordered_categories[column]
         data[column] = encoder.transform(data[column]) 
         
-data.to_csv('./data/preprocessed/clinical_data.csv', sep=';')
+data.to_csv('./data/preprocessed/clinical_data.csv', sep=';', index=False)
 
 # split dataset to train and test
 data_shape = data.shape[0]
@@ -77,5 +77,5 @@ splitter = int(np.ceil(0.8*data_shape))
 train_data = data.iloc[:splitter]
 test_data = data.iloc[splitter:]
 
-train_data.to_csv('./data/preprocessed/train_data.csv', sep=';')
-test_data.to_csv('./data/preprocessed/test_data.csv', sep=';')
+train_data.to_csv('./data/preprocessed/train_data.csv', sep=';', index=False)
+test_data.to_csv('./data/preprocessed/test_data.csv', sep=';', index=False)

@@ -12,8 +12,35 @@
     "classification:": [
       {
         "method": "decision trees",
-        "result": ""
+        "parameters": "None",
+        "result": 0.185
+      },
+      {
+        "method": "decision trees",
+        "parameters": {
+          "criterion": "entropy"
+        },
+        "result": 0.188
+      },
+      {
+        "method": "decision trees",
+        "parameters": {
+          "splitter": "random"
+        },
+        "result": 0.175
+      },
+      {
+        "method": "decision trees",
+        "parameters": {
+          "criterion": "entropy",
+          "max_depth": 5,
+          "min_samples_leaf": 20,
+          "min_samples_split": 25,
+          "min_weight_fraction_leaf": 0.0
+        },
+        "result": 0.207
       }
+      
     ] 
   }, 
   "beacons_data": {

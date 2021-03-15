@@ -1,5 +1,7 @@
 clean:
-	# python src/clean.py
+	python src/clean.py
+
+
 
 preprocessing:	
 ifeq ($(dataset), clinical)

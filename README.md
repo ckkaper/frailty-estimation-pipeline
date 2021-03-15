@@ -4,7 +4,10 @@ This is a small automated pipeline for the evaluation of a sample [Frailsafe](ht
 -   **clinical dataset**
 
 ## Preprocessing 
-Bellow are presented the preprocessing methods followed on preprocessing the data. 
+Bellow are presented the preprocessing methods followed on preprocessing the data.
+```
+make preprocessing dataset=${clinical,beacons}
+```
 ### Clinical Dataset
 For the clincal dataset the following columns are stripped out, since the aim is to predict the fraility of a person without the information gained from this data. 
 ```
